@@ -101,3 +101,98 @@
 //     console.log(i,"number is positive")
 // }
 //    }
+
+// =========13. Find the largest of two numbers.===========
+//  function  findLargestNumber(){
+// let a = 10
+//  let b = 20
+//  if(a > b){
+//  console.log(a , "is bigger than b")
+//  }
+//   else{
+//      console.log(b," is bigger  than a")
+//   }
+
+//  }
+//  findLargestNumber()
+
+//========== 14. Find the largest of three numbers ==============
+// function findLargestNumber(a,b,c){
+//     if(a > b && a > c){
+//         console.log(a,"a is greather than  b and c")
+//     }else if (b > a && b > c){
+//         console.log(b, " b is greter than a  and c")
+//     }else if(c > a && c > b){
+//         console.log(c, "c is greater than a  and b")
+//     }
+// }
+// findLargestNumber(10,20,30)
+// ========== 15. Check if a number is divisible by 5.
+
+//  function divisible(num){
+//     if( num % 5  == 0){
+//          console.log(num, "is divisible by 5")
+//     }
+//     else{
+//         console.log(num, " is not  divisible by 5")
+//     }
+//  }
+//   divisible(10)
+// ========== 16.Check if a number is divisible by both 3 and 5.======
+//  function divisible(num){
+//     if(num % 3 == 0 && num % 5 == 0){
+//         console.log(num, " can be divisable both 3 and five")
+//     }
+//     else{
+//         console.log(num, " can not be divide")
+//     }
+//  }
+//  divisible(10)
+
+//========= 17. Check if a year is a leap year.=============
+//  function findsLeapyear(year){
+//     if(year % 4 == 0){
+//          console.log( year, " is leap year")
+//     }
+//     else{
+//         console.log(year,"is not a leap year")
+//     }
+//  }
+//  findsLeapyear( 2023)
+
+// ========== 18. Check if a character is a vowel..========
+// function checkVowel(char){
+// if(char == "a"  || char == "e" || char == "i"  || char == "o"  ||char =="u"){
+//     console.log(char," is vowel")
+// }}
+// checkVowel("a")
+//    function checkVowelByLoop(word){
+//     for(let i = 0 ; i < word.length ; i++){
+//         let char = word[i]
+//         if(char == "a" || char == "e" || char == "i" || char == "o"  || char == "u"){
+//             console.log(char, "is vowel")
+//         }
+//     }
+//    }
+//    checkVowelByLoop("hello")
+
+// ====== 19 Check if a number is multiple of 7. ========
+// function divdeable(num){
+//     if(num % 7 == 0 ){
+//         console.log(num,  'is multiple of 7')
+//     } else{
+//         console.log(num, " is not multiple of 7")
+//     }
+// }
+// divdeable(20)
+
+
+// ======== 20 Check if a number is within range 1–100.=======
+// function  range(num){
+//          if(num  >= 1 && num  <= 100 ){
+//             console.log(num , "is  in range")
+//          }
+//          else{
+//             console.log( num, " is not in range"           )
+//          }}
+// range(10)
