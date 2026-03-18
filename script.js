@@ -1,198 +1,365 @@
-//Basic JavaScript Logic Questions===========================
+// ==================================================
+// BASIC JAVASCRIPT LOGIC PRACTICE
+// ==================================================
 
-// ===============1. Print "Hello World" in JavaScript=====================
-// console.log("Hello World")
-
-// =====================2. Add two numbers and print the result.=================
-//  let a = 2
-//  let b = 3
-//   console.log(a+b)
-
-// ==================3. Swap two numbers using a third variable.===================
-
-// let a = 2
-// let b = 3
-//  let temp = a
-//   a = b
-//   b = temp
-//   console.log(a,b)
-
-// ====================4. Swap two numbers without using a third variable.===================
-
-// let a = 10
-// let b = 5
-// a = a + b
-// b = a - b
-// a  = a - b
-// console.log( a, b)
-
-// ================== 5. Find the square of a number.\====================
-
-// function test(n){
-//  for (let i= 1; i<= 10; i++){
-//         console.log(i* i)
-//  }}
-// test(5)
-
-// ===============6. Find the cube of a number.=========================
-
-// function test(){
-// for(let i = 1; i<=10; i++){
-//  console.log(i * i * i)
+// ==================================================
+// 1. Print "Hello World"
+// ==================================================
+// function printHello() {
+//     console.log("Hello World");
 // }
+// printHello();
+
+// ==================================================
+// 2. Add Two Numbers
+// ==================================================
+// function addNumbers(a, b) {
+//     console.log("Sum:", a + b);
 // }
-// test()
+// addNumbers(2, 3);
 
-//  ======= 7 Convert Celsius to Fahrenheit.=========
-// Formula Of Celsius to Fahrenheit = (celsius * 1.8) + 32
-//  const celsius = 10
-//   const fahrenheit =   (celsius * 1.8)  + 32
-//    console.log(fahrenheit)
+// ==================================================
+// 3. Swap Two Numbers (Using Third Variable)
+// ==================================================
+// function swapNumbers(a, b) {
+//     let temp = a;
+//     a = b;
+//     b = temp;
 
-//  ======= 8 Convert Fahrenheit to Celsius.============
-//   Formula of Fahrenheit to Celsius =  (Fahrenheit - 32) 1.8
-// const fahrenheit = 50
-//   const celsius = (fahrenheit  - 32) / 1.8
-//   console.log(celsius)
-
-// ========= 9. Calculate simple interest.=============
-//   Formula of Simple Intrest =  (principle * Intrest * time ) / 100
-// const  principle = 5000
-//  const  interestRate = 3
-//  const time = 2
-//    const simpleIntrest = (principle * interestRate * time) / 100
-//    console.log(simpleIntrest)
-
-// ========== 10. Find the area of a circle.========
-//    Formula of area of circle  = πr2
-//  const   circle = 20
-//   const  area = 22/7 * (circle * circle)
-
-//   console.log(area)
-
-/////===============Conditional Statements=====================
-
-//============== 11. Check if a number is even or odd.
-//  function test (n){
-//       if ( n % 2 == 0){
-//         console.log(n,"in is even number")
-//       }
-//       else{
-//          console.log( n , " is  odd number")
-//       }
-//  }
-
-//  test(2)
-//    for(let i = 1; i <=10; i++){
-//     if(i % 2 == 0){
-//         console.log( i , " is even number")
-//     }
-//     else{
-//         console.log(i, "is odd number")
-//     }
-//    }
-
-// ======12 . Check if a number is positive or negative.===========
-//    for ( let i = -5; i<=5; i++){
-//     if(i < 0){
-//         console.log(i,"number is negative")
-//     }
-// else if (i > 0){
-//     console.log(i,"number is positive")
+//     console.log("After Swap:", a, b);
 // }
-//    }
+// swapNumbers(2, 3);
 
-// =========13. Find the largest of two numbers.===========
-//  function  findLargestNumber(){
-// let a = 10
-//  let b = 20
-//  if(a > b){
-//  console.log(a , "is bigger than b")
-//  }
-//   else{
-//      console.log(b," is bigger  than a")
+// ==================================================
+// 4. Swap Without Third Variable
+// ==================================================
+// function swapWithoutTemp(a, b) {
+//     a = a + b;
+//     b = a - b;
+//     a = a - b;
+
+//     console.log("After Swap:", a, b);
+// }
+// swapWithoutTemp(10, 5);
+
+// ==================================================
+// 5. Square of Numbers (1–10)
+// ==================================================
+// function printSquares() {
+//     for (let i = 1; i <= 10; i++) {
+//         console.log(i * i);
+//     }
+// }
+// printSquares();
+
+// ==================================================
+// 6. Cube of Numbers (1–10)
+// ==================================================
+// function printCubes() {
+//     for (let i = 1; i <= 10; i++) {
+//         console.log(i * i * i);
+//     }
+// }
+// printCubes();
+
+// ==================================================
+// 7. Celsius → Fahrenheit
+// ==================================================
+// function celsiusToFahrenheit(celsius) {
+//     let fahrenheit = (celsius * 1.8) + 32;
+//     console.log("Fahrenheit:", fahrenheit);
+// }
+// celsiusToFahrenheit(10);
+
+// ==================================================
+// 8. Fahrenheit → Celsius
+// ==================================================
+// function fahrenheitToCelsius(f) {
+//     let celsius = (f - 32) / 1.8;
+//     console.log("Celsius:", celsius);
+// }
+// fahrenheitToCelsius(50);
+
+// ==================================================
+// 9. Simple Interest
+// ==================================================
+// function simpleInterest(p, r, t) {
+//     let si = (p * r * t) / 100;
+//     console.log("Simple Interest:", si);
+// }
+// simpleInterest(5000, 3, 2);
+
+// ==================================================
+// 10. Area of Circle
+// ==================================================
+// function areaOfCircle(r) {
+//     let area = Math.PI * r * r;
+//     console.log("Area:", area);
+// }
+// areaOfCircle(20);
+
+// ==================================================
+// CONDITIONAL STATEMENTS
+// ==================================================
+
+// 11. Even or Odd
+// function checkEvenOdd(n) {
+//     if (n % 2 === 0) {
+//         console.log(n, "is even");
+//     } else {
+//         console.log(n, "is odd");
+//     }
+// }
+// checkEvenOdd(7);
+
+// 12. Positive or Negative
+// function checkNumber(n) {
+//     if (n > 0) console.log("Positive");
+//     else if (n < 0) console.log("Negative");
+//     else console.log("Zero");
+// }
+// checkNumber(-5);
+
+// 13. Largest of Two Numbers
+// function largestTwo(a, b) {
+//     console.log(a > b ? a : b);
+// }
+// largestTwo(10, 20);
+
+// 14. Largest of Three Numbers
+// function largestThree(a, b, c) {
+//     console.log(Math.max(a, b, c));
+// }
+// largestThree(10, 20, 30);
+
+// 15. Divisible by 5
+// function divisibleByFive(num) {
+//     console.log(num % 5 === 0 ? "Divisible by 5" : "Not divisible by 5");
+// }
+// divisibleByFive(10);
+
+// 16. Divisible by 3 and 5
+// function divisibleBy3And5(num) {
+//     console.log(num % 3 === 0 && num % 5 === 0 ? "Divisible by both" : "Not divisible");
+// }
+// divisibleBy3And5(15);
+
+// 17. Leap Year
+// function checkLeapYear(year) {
+//     console.log(year % 4 === 0 ? "Leap Year" : "Not Leap Year");
+// }
+// checkLeapYear(2024);
+
+// 18. Check Vowel
+// function checkVowel(char) {
+//     if ("aeiou".includes(char)) {
+//         console.log(char, "is vowel");
+//     }
+// }
+// checkVowel("a");
+
+// 19. Multiple of 7
+// function multipleOf7(num) {
+//     console.log(num % 7 === 0 ? "Multiple of 7" : "Not multiple");
+// }
+// multipleOf7(21);
+
+// 20. Range 1–100
+// function checkRange(num) {
+//     console.log(num >= 1 && num <= 100 ? "In Range" : "Out of Range");
+// }
+// checkRange(50);
+
+// ==================================================
+// LOOPS
+// ==================================================
+
+// 21. Print numbers from 1 to 10.
+// function number(){
+//     for(let i = 0; i <= 10; i++){
+//         console.log(i)
+
+//     }
+// }
+// number()
+
+// 22. Print numbers from 10 to 1.
+// function number(){
+//     for ( let i = 10; i>=0; i--){
+//         console.log(i)
+//     }
+// }
+//  number()
+
+// 23 . Print even numbers from 1 to 50.
+// function even() {
+//   for (let i = 1; i <= 50; i++) {
+//     if (i % 2 == 0) {
+//       console.log(i);
+//     }
 //   }
-
-//  }
-//  findLargestNumber()
-
-//========== 14. Find the largest of three numbers ==============
-// function findLargestNumber(a,b,c){
-//     if(a > b && a > c){
-//         console.log(a,"a is greather than  b and c")
-//     }else if (b > a && b > c){
-//         console.log(b, " b is greter than a  and c")
-//     }else if(c > a && c > b){
-//         console.log(c, "c is greater than a  and b")
+// }
+// even();
+// function even(){
+//     for(let i = 2; i <=50;  i += 2  ){
+//         console.log(i)
 //     }
 // }
-// findLargestNumber(10,20,30)
-// ========== 15. Check if a number is divisible by 5.
+// even()
 
-//  function divisible(num){
-//     if( num % 5  == 0){
-//          console.log(num, "is divisible by 5")
+// 24. Print odd numbers from 1 to 50.
+// function odd() {
+//   for (let i = 1; i <= 50; i++) {
+//     if (i % 2 == 1) {
+//       console.log(i, "is odd number");
 //     }
-//     else{
-//         console.log(num, " is not  divisible by 5")
-//     }
-//  }
-//   divisible(10)
-// ========== 16.Check if a number is divisible by both 3 and 5.======
-//  function divisible(num){
-//     if(num % 3 == 0 && num % 5 == 0){
-//         console.log(num, " can be divisable both 3 and five")
-//     }
-//     else{
-//         console.log(num, " can not be divide")
-//     }
-//  }
-//  divisible(10)
+//   }
+// }
+// odd();
+// function odd() {
+//   for (let i = 1; i <= 50; i += 2) {
+//     console.log(i, "is odd number");
+//   }
+// }
+// odd();
 
-//========= 17. Check if a year is a leap year.=============
-//  function findsLeapyear(year){
-//     if(year % 4 == 0){
-//          console.log( year, " is leap year")
+// 25.Find the sum of numbers from 1 to N.
+// function sumofNumber(n){
+//     let sum = 0
+//     for( let i = 1 ; i <=n; i++){
+//          sum = sum + i
 //     }
-//     else{
-//         console.log(year,"is not a leap year")
-//     }
-//  }
-//  findsLeapyear( 2023)
+//     console.log(sum)
+// }
+//  sumofNumber(5)
 
-// ========== 18. Check if a character is a vowel..========
-// function checkVowel(char){
-// if(char == "a"  || char == "e" || char == "i"  || char == "o"  ||char =="u"){
-//     console.log(char," is vowel")
-// }}
-// checkVowel("a")
-//    function checkVowelByLoop(word){
-//     for(let i = 0 ; i < word.length ; i++){
-//         let char = word[i]
-//         if(char == "a" || char == "e" || char == "i" || char == "o"  || char == "u"){
-//             console.log(char, "is vowel")
-//         }
-//     }
-//    }
-//    checkVowelByLoop("hello")
+//26.Find factorial of a number.
+// function facto(){
+//     let fact = 1
+//     for (let i = 1 ; i <= 5; i++){
+//     fact  = fact * i
 
-// ====== 19 Check if a number is multiple of 7. ========
-// function divdeable(num){
-//     if(num % 7 == 0 ){
-//         console.log(num,  'is multiple of 7')
-//     } else{
-//         console.log(num, " is not multiple of 7")
+//     console.log(fact);
 //     }
 // }
-// divdeable(20)
+//  facto()
+// 27. Print multiplication table of a number.
+//   function  multiplecation (num){
+//   for (let i = 1; i <= 10; i++){
+//     let table = num * i
+//     console.log(table)
+//   }
+//   }
+//   multiplecation(6)
+// 28. Count digits in a number.
 
+// function countDigit(num){
+//    let count = 0
+//    if(num === 0){
+//      return 1
+//     }
+//   for(; num !==0 ; num = Math.floor( num / 10)){
+//       count++
+//   }
+//   console.log(count)
+//  }
+//  countDigit(2343)
+// 29.Reverse a number.
+// function reverseNumber(num) {
+//   let reverseNumber = 0;
+//   for (; num !== 0; num = Math.floor(num / 10)) {
+//     let digits = num % 10;
+//     reverseNumber = reverseNumber * 10 + digits;
+//   }
+//   return reverseNumber;
+// }
+// reverseNumber(123456789);
+// 30. Check if number is palindrom
+// function palindrome(num){
+//   let orignalNum =  num
+//   let reverse = 0 
+//   for(; num !== 0 ;  num =  Math.floor(num / 10)){
+//     let digits = num % 10
+//     reverse =  reverse * 10 + digits
+//   }
+//   if(reverse === orignalNum){
+//     console.log("its palindrome number")
+//   } else{
+//     console.log("its not a palindrome number")
+//   }
+// }
+// palindrome(1221)
 
-// ======== 20 Check if a number is within range 1–100.=======
-// function  range(num){
-//          if(num  >= 1 && num  <= 100 ){
-//             console.log(num , "is  in range")
-//          }
-//          else{
-//             console.log( num, " is not in range"           )
-//          }}
-// range(10)
+//=====================================================
+//String Basics
+//=====================================================
+
+// 31. Reverse a string.
+//  let str = "helloooo"
+//   let reversestr=  str.split("").reverse().join("")
+//   console.log(reversestr)
+
+//  let str = "helloooo"
+//  let reverseStr = ""
+//  for(let i = str.length - 1; i >= 0; i--){
+//     reverseStr += str[i]
+//  }
+//  console.log(reverseStr)
+// 32. Count characters in a string
+// let  str =  "hhell"
+//  let count = 0
+//  for(let i = str.length -1; i >=0; i--){
+//   count = count + 1
+//  }
+//  console.log(count)
+//33.Convert string to uppercase. 
+// let str = " helllo"
+//  str =  str.toUpperCase()
+//  console.log(str)
+//34 Convert string to lowercase.
+// let str = "Helloo"
+// str = str.toLowerCase()
+// console.log(str)
+//35  Check if string contains a specific character.
+// let str = "hel-lloo-"
+// let found = false
+// for(let i = str.length - 1; i >= 0; i--){
+//   if(str[i] === "-" ){
+//     console.log("its a special word")
+//     found = true
+//     break
+//   } else{
+//      console.log("no special word found")
+//   }
+//   console.log(i)
+// }
+
+//36 find the vowel from string
+// let str = "helloo"
+// let count = 0
+// for(let i = str.length -1; i >=0; i--){
+//   if(str[i] === 'a' ||str[i] === 'e'||  str[i] ==='i'||str[i] === 'o' ||str[i] === 'u'){
+//     count++
+//   }
+// } 
+// console.log(count)
+
+//37 Remove spaces from a string.
+// let str = "he lll o"
+// let removespace =  str.replace(/ /g,"")
+// console.log(removespace)
+// 38 Check if string is palindrome.
+//  let str = "madam"
+//  let reverse =""
+//  for (let i = str.length -1; i>=0; i--){
+// reverse += str[i]
+// }
+// if(str === reverse){
+//      console.log("it is a palindrome string")
+// }else{
+//     console.log("it is  not a palindrome  string ")
+// }
+//39 Replace word in a string.
+// let  str = " i like coding"
+//  let repalceArry =  str.replace("coding", "guitar")
+//  console.log(repalceArry)
