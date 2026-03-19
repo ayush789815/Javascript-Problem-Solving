@@ -277,7 +277,7 @@
 // 30. Check if number is palindrom
 // function palindrome(num){
 //   let orignalNum =  num
-//   let reverse = 0 
+//   let reverse = 0
 //   for(; num !== 0 ;  num =  Math.floor(num / 10)){
 //     let digits = num % 10
 //     reverse =  reverse * 10 + digits
@@ -312,7 +312,7 @@
 //   count = count + 1
 //  }
 //  console.log(count)
-//33.Convert string to uppercase. 
+//33.Convert string to uppercase.
 // let str = " helllo"
 //  str =  str.toUpperCase()
 //  console.log(str)
@@ -341,7 +341,7 @@
 //   if(str[i] === 'a' ||str[i] === 'e'||  str[i] ==='i'||str[i] === 'o' ||str[i] === 'u'){
 //     count++
 //   }
-// } 
+// }
 // console.log(count)
 
 //37 Remove spaces from a string.
@@ -363,3 +363,88 @@
 // let  str = " i like coding"
 //  let repalceArry =  str.replace("coding", "guitar")
 //  console.log(repalceArry)
+//40 Find length of longest word in sentence.
+//  let str = "I love programming very much"
+//      let arr = str.split(" ")
+// let maxLenght = 0
+//  for ( let i = 0 ;  i < arr.length; i++){
+// if (arr[i].length > maxLenght) {
+//     maxLenght = arr[i].length;
+// }
+//  }
+//   console.log(maxLenght)
+// ===============================================================
+// Loops
+// ===============================================================
+//41.Print all elements of an array.
+
+// let arr = [1,2,4,5,6,89,43,232,3,345]
+//  for (let i = 0; i< arr.length; i++){
+//     console.log(arr[i])
+//  }
+// 42 . Find sum of array elements.
+//  let arr = [1,2,4,5,6,9,43,32,3,3]
+//  let num = 0
+//   for ( let i = 0 ; i<arr.length; i++){
+//         num  = num  + arr[i]
+//   }
+//    console.log( num)
+//43 Find largest element in array.
+// let arr = [1, 2, 4, 5, 6, 9, 43, 32, 3, 3];
+// let largest = 0
+// for ( let i = 0 ; i < arr.length ; i++){
+// if(arr[i]> largest){
+//     largest = arr[i]
+// }
+// }
+//  console.log(largest)
+// =========================================
+// Level 2 – Strengthen Basics (44–70)
+//==========================================
+// 44 Find smallest number in an array
+// let arr = [1, 2, 4, 5, 6, 9, 43, 32, 3, 3];
+// let lowest =arr[0]
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] < lowest){
+//             lowest = arr[i]
+//    }    }
+//     console.log(lowest)
+//  let arr = [1, 2, 4, 5, 6, 9, 43, 32, 3, 3];
+//  console.log(Math.min(...arr))
+//45  Find second largest number in an array
+// let arr = [1, 2, 4, 5, 6, 9, 43, 32, 3, 3];
+
+// let largest = -Infinity;
+// let secondLargest = -Infinity;
+
+// for (let i = 0; i < arr.length; i++) {
+//     let num = arr[i];
+//  console.log( num ," num is ")
+//     if (num > largest) {
+//         secondLargest = largest;
+//         console.log("secondLargets number is ", secondLargest)
+//         largest = num;
+//         console.log("larget number is ",largest)
+//     } 
+//     else if (num < largest && num > secondLargest) {
+//         secondLargest = num;
+//     }
+// }
+
+// console.log(secondLargest);
+//46 Find second smallest number
+ let arr = [1, 2, 4, 5, 6, 9, 43, 32, 3, 3];
+let lowest = Infinity;
+let secondLowest = Infinity;
+
+for(let i = 0; i < arr.length; i++){
+    let num = arr[i]
+    if(num < lowest){
+        secondLowest = lowest
+        lowest = num
+    }
+    else if(num >  lowest && num < secondLowest){
+        secondLowest = num
+    }
+}
+console.log(secondLowest)
