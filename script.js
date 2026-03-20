@@ -425,7 +425,7 @@
 //         console.log("secondLargets number is ", secondLargest)
 //         largest = num;
 //         console.log("larget number is ",largest)
-//     } 
+//     }
 //     else if (num < largest && num > secondLargest) {
 //         secondLargest = num;
 //     }
@@ -433,18 +433,45 @@
 
 // console.log(secondLargest);
 //46 Find second smallest number
- let arr = [1, 2, 4, 5, 6, 9, 43, 32, 3, 3];
-let lowest = Infinity;
-let secondLowest = Infinity;
+//  let arr = [1, 2, 4, 5, 6, 9, 43, 32, 3, 3];
+// let lowest = Infinity;
+// let secondLowest = Infinity;
 
-for(let i = 0; i < arr.length; i++){
-    let num = arr[i]
-    if(num < lowest){
-        secondLowest = lowest
-        lowest = num
+// for(let i = 0; i < arr.length; i++){
+//     let num = arr[i]
+//     if(num < lowest){
+//         secondLowest = lowest
+//         lowest = num
+//     }
+//     else if(num >  lowest && num < secondLowest){
+//         secondLowest = num
+//     }
+// }
+// console.log(secondLowest)
+//47 Check if a number is prime
+//   function primeArry(num){
+//     if(num <= 1) return  false;
+//     for(let i = 2; i <= Math.sqrt(num);i++){
+//         if(num % i === 0){
+//             return  false
+//         }
+//     }
+//     return true
+//    }
+// console.log(primeArry(34))
+//48 Print all prime numbers from 1 to N
+ function printPrimeNum(n){
+   for(let num = 2; num <= n; num++){
+    let isPrime = true
+    for(let i = 2;i <= Math.sqrt(num); i++){
+        if(num % i === 0){
+            isPrime = false;
+            break
+        }
     }
-    else if(num >  lowest && num < secondLowest){
-        secondLowest = num
+    if(isPrime){
+        console.log(num)
     }
-}
-console.log(secondLowest)
+   }
+ }
+ printPrimeNum(100)
